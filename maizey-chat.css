@@ -1,32 +1,66 @@
-/* ====== University of Michigan overrides ====== */
+/*! Package version @n8n/chat@0.60.0 */
+@charset "UTF-8";
+/* ========== ORIGINAL BASE CSS ========== */
+/* (paste everything you already have from the n8n style.css here) */
+
+/* ===================================================== */
+/* ===== University of Michigan theme overrides ======== */
+/* ===================================================== */
 :root {
-  --chat--color-primary: #FFCB05;
+  /* Brand core */
+  --chat--color-primary: #FFCB05;                 
   --chat--color-primary-shade-50: #E6B700;
   --chat--color-primary-shade-100: #CCA100;
 
-  --chat--color-secondary: #00274C;
+  --chat--color-secondary: #00274C;               
   --chat--color-secondary-shade-50: #001F3A;
 
   --chat--color-dark: #00274C;
+  --chat--color-light: #F4F7FB;
+
+  /* Window & layout */
+  --chat--window--width: 420px;
+  --chat--window--height: 580px;
+  --chat--border-radius: 16px;
+  --chat--window--border-radius: 16px;
+  --chat--messages-list--padding: 1.25rem;
+
+  /* Header */
   --chat--header--background: #00274C;
   --chat--header--color: #FFFFFF;
+  --chat--heading--font-size: 2rem;
+  --chat--header--padding: 1.25rem;
 
+  /* Bubbles */
   --chat--message--bot--background: #E6F0FF;
   --chat--message--bot--color: #00274C;
-
   --chat--message--user--background: #00274C;
   --chat--message--user--color: #FFFFFF;
+  --chat--message--border-radius: 12px;
 
+  /* Input + footer */
+  --chat--footer--background: #F4F7FB;
+  --chat--footer--color: #00274C;
+  --chat--input--background: #FFFFFF;
+  --chat--input--send--button--background: #FFFFFF;
+  --chat--input--send--button--color: #00274C;
+  --chat--input--send--button--background-hover: #FFCB05;
+  --chat--input--send--button--color-hover: #001F3A;
+
+  /* Buttons & launcher */
   --chat--button--background: #FFCB05;
   --chat--button--color: #00274C;
   --chat--button--hover--background: #E6B700;
-
   --chat--toggle--background: #FFCB05;
   --chat--toggle--hover--background: #E6B700;
   --chat--toggle--active--background: #CCA100;
+
+  /* Page bg */
+  --chat--body--background: #F4F7FB;
 }
 
 /* Thin maize band across the header */
+.chat-layout .chat-header { position: relative; }
 .chat-layout .chat-header::before {
   content: "";
   position: absolute;
@@ -37,8 +71,12 @@
 /* Optional Maizey badge in header */
 #n8n-chat .chat-header { padding-top: 2.75rem; }
 #n8n-chat .chat-header::after {
-  content:""; position:absolute; left:50%; top:10px; transform:translate(-50%,-50%);
-  width:72px; height:72px; border-radius:999px;
-  background:#fff url("/assets/img/maizey-bot.png") center/60px 60px no-repeat;
-  box-shadow:0 2px 10px rgba(0,0,0,.18);
+  content:"";
+  position: absolute;
+  left: 50%; top: 10px;
+  transform: translate(-50%, -50%);
+  width: 72px; height: 72px;
+  border-radius: 999px;
+  background: #fff url("/assets/img/maizey-bot.png") center/60px 60px no-repeat;
+  box-shadow: 0 2px 10px rgba(0,0,0,.18);
 }
